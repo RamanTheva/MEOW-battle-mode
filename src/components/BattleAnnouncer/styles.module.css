@@ -1,0 +1,18 @@
+.main {
+  height: 100%;
+  padding: 25px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 100%;
+
+  color: #e2e3e2;
+
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  background-color: #353734;
+}
+.message {
+  text-align: left;
+  font-size: 32px;
+}

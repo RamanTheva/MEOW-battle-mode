@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user,
+.opponent {
+  display: flex;
+  width: 100vw;
+  box-sizing: border-box;
+  position: relative;
+  height: 110px;
+}
+
+.opponent {
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 20px;
+  margin-top: 4vh;
+}
+
+.user {
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-right: 35px;
+  margin-bottom: 10vw;
+}
+
+.summary {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 60%;
+  z-index: 2;
+}
+
+.characterArrow {
+  z-index: 1;
+  width: 60%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+}
+
+.user .characterArrow {
+  right: 10px;
+  transform: scaleX(-1);
+}
+
+.gameImages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  padding: 0 10vw;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 40%;
+  flex-wrap: wrap;
+}
+
+.sprite {
+  width: 100%;
+  height: 110px;
+}
+
+.opponentSprite {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.gameImages img {
+  /* max-height: 25vh;
+  min-height: 150px; */
+  height: 110px;
+}
+
+.actionMessageBox {
+  width: 90vw;
+  height: 150px;
+  /* border: 5px solid rgb(199, 199, 199); */
+  position: relative;
+}
+
+.messageBar {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+}
+
+#leftBar {
+  left: 0;
+  object-fit: fill;
+  width: 5%;
+  height: 100%;
+}
+
+#rightBar {
+  right: 0;
+  object-fit: fill;
+  width: 5%;
+  height: 100%;
+}
+
+#horizontalBar {
+  object-fit: fill;
+  width: 97%;
+  height: 100%;
+}
+
+.actions {
+  width: 90vw;
+  height: 150px;
+  position: absolute;
+  z-index: 1;
+}
+
+.message {
+  width: 90vw;
+  height: 150px;
+  position: absolute;
+  z-index: 0;
+}
+
+/* animations */
+
+.static {
+  transform: translateX(0px);
+  transform: translateY(0px);
+  transition: 0.5s;
+}
+
+.playerSprite .attack {
+  transition: 0.1s;
+  transform: translateX(100px);
+}
+.opponentSprite .attack {
+  transition: 0.1s;
+  transform: translateX(-100px);
+}
+
+.magic {
+  transition: 0.2s;
+  transform: translateY(-25px);
+  animation: shake 0.5s infinite;
+}
+
+.damage {
+  opacity: 1;
+  animation: flash 0.3s 0.3s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg) translateY(-25px);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg) translateY(-25px);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg) translateY(-25px);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg) translateY(-25px);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg) translateY(-25px);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg) translateY(-25px);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg) translateY(-25px);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg) translateY(-25px);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg) translateY(-25px);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg) translateY(-25px);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg) translateY(-25px);
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

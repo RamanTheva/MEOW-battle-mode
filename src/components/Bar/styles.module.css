@@ -1,0 +1,36 @@
+.main {
+  display: flex;
+  border-radius: 5px;
+  gap: 5px;
+  align-items: center;
+  background-color: lightgray;
+  width: 60%;
+  height: 10px;
+}
+
+/* .label {
+  font-size: 32px;
+  font-weight: bold;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 50px;
+  color: black;
+} */
+
+.max {
+  height: 35px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-sizing: border-box;
+  flex: 1;
+  background-color: #3f4442;
+  height: 100%;
+}
+.value {
+  height: 100%;
+  background-color: lightgray;
+
+  transition: 0.35s;
+}

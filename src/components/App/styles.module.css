@@ -1,0 +1,14 @@
+.main {
+  background-color: rgb(38, 41, 43);
+  /* or background color  #353734  ?? */
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-family: DotGothic16;
+}

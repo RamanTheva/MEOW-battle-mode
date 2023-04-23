@@ -1,0 +1,32 @@
+.main {
+  box-sizing: border-box;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  background-color: ghostwhite;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  font-family: "Press Start 2P";
+}
+.main > :first-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.option {
+  display: flex;
+
+  background-color: #353734;
+
+  align-items: center;
+  justify-content: center;
+  color: #e4e6e3;
+  font-size: 22px;
+
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #e4e6e3;
+  color: #353734;
+}
